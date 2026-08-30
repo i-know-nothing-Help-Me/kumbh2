@@ -1,0 +1,247 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"><style>
+:root{--ganga:#0B5661;--ganga2:#083F48;--deep:#062F36;--saffron:#C85A20;--saffron2:#A84416;--gold:#D79A2B;--gold2:#E8C978;--ivory:#FBF8F1;--sand:#F1E8D8;--paper:#F7F1E5;--ink:#17272B;--muted:#657477;--white:#FFFDF8;--line:rgba(23,39,43,.13);--darkline:rgba(255,255,255,.17);--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit}img{width:100%;height:100%;object-fit:cover;display:block}button,input,select,textarea{font:inherit}h1,h2,h3,h4{font-family:"Cormorant Garamond",serif;font-weight:500;line-height:1.08;margin:0}h1{font-size:clamp(3.2rem,7vw,6.8rem)}h2{font-size:clamp(2.25rem,4vw,3.8rem)}h3{font-size:2rem}.container{width:min(var(--max),calc(100% - 48px));margin:auto}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--saffron);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}.eyebrow:before{content:"";width:28px;height:1px;background:currentColor}.dark .eyebrow,.hero .eyebrow{color:var(--gold2)}.section{padding:110px 0}.section-intro{max-width:700px}.section-intro p{color:var(--muted);margin:18px 0 0;font-size:16px}.dark .section-intro p{color:rgba(255,255,255,.72)}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 21px;border:1px solid currentColor;text-decoration:none;text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:600;cursor:pointer;transition:.2s}.btn-primary{background:var(--saffron);border-color:var(--saffron);color:#fff}.btn-primary:hover{background:var(--saffron2);border-color:var(--saffron2)}.btn-teal{background:var(--ganga);border-color:var(--ganga);color:#fff}.btn-teal:hover{background:var(--ganga2)}.btn-light{color:#fff;border-color:rgba(255,255,255,.65)}.btn-text{border:0;padding:0;background:none;color:var(--ganga);min-height:auto}
+
+.site-header{position:fixed;z-index:100;top:0;left:0;right:0;height:82px;background:rgba(6,47,54,.96);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px);color:#fff}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.brand-mark{width:36px;height:36px;border:1px solid rgba(232,201,120,.8);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-family:serif}.brand-name{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1}.brand-sub{display:block;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:3px}.nav-links{display:flex;align-items:center;gap:25px}.nav-links a{font-size:10px;letter-spacing:.11em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.82)}.nav-links a:hover{color:#fff}.menu{display:none;background:none;border:0;color:#fff;font-size:25px}
+
+.hero{position:relative;min-height:calc(100svh - 0px);padding-top:82px;background:var(--deep);color:#fff;overflow:hidden}.hero-media{position:absolute;inset:0}.hero-media img{opacity:.9}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,47,54,.82),rgba(6,47,54,.38) 55%,rgba(6,47,54,.16)),linear-gradient(0deg,rgba(6,47,54,.82),transparent 55%)}.hero-inner{position:relative;z-index:2;min-height:calc(100svh - 82px);display:flex;align-items:flex-end;padding-bottom:150px}.hero-copy{max-width:720px}.hero h1{max-width:10ch}.hero h1 em{font-style:italic;color:var(--gold2)}.hero-copy>p{max-width:600px;color:rgba(255,255,255,.85);font-size:17px;margin:23px 0 0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:29px}.hero-note{font-size:11px;color:rgba(255,255,255,.6);margin-top:14px}.quickbar{position:absolute;z-index:5;bottom:0;left:50%;transform:translateX(-50%);width:min(1080px,calc(100% - 48px));background:rgba(255,253,248,.97);color:var(--ink);display:grid;grid-template-columns:1fr 1fr 1fr auto;box-shadow:0 -12px 40px rgba(0,0,0,.13)}.quick{padding:17px 20px;border-right:1px solid var(--line)}.quick small{display:block;color:var(--muted);font-size:9px;letter-spacing:.15em;text-transform:uppercase}.quick strong{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:500}.quick-cta{display:flex;align-items:center;padding:10px}
+
+.intro{text-align:center;background:var(--ivory)}.intro .section-intro{margin:auto}.intro .eyebrow{justify-content:center}.intro .eyebrow:before{display:none}.intro h2{max-width:780px;margin:auto}.intro .section-intro p{max-width:700px;margin:20px auto}.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:55px}.fact{padding:22px 10px;border-right:1px solid var(--line)}.fact:last-child{border:0}.fact b{display:block;font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--ganga)}.fact span{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}.media{height:600px;position:relative}.media:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(200,90,32,.35);pointer-events:none}.copy p{color:var(--muted);max-width:58ch;margin-top:17px}.copy .btn{margin-top:27px}.paper{background:var(--paper)}.sand{background:var(--sand)}.dark{background:var(--deep);color:#fff}.dark h2,.dark h3,.dark h4{color:#fff}
+
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}.image-card{height:500px;position:relative;overflow:hidden}.image-card img{transition:.5s}.image-card:hover img{transform:scale(1.04)}.image-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,47,54,.92),transparent 67%)}.image-card-content{position:absolute;z-index:2;left:27px;right:27px;bottom:26px}.image-card h3{font-size:31px}.image-card p{font-size:13px;color:rgba(255,255,255,.73);margin-top:9px}.image-card a{display:inline-block;color:var(--gold2);font-size:10px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;margin-top:15px}
+
+.res-head{display:flex;align-items:end;justify-content:space-between;gap:35px}.res-head p{max-width:470px;color:var(--muted)}.res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:48px}.res-card{background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:.9fr 1.1fr}.res-card .res-img{height:300px}.res-body{padding:26px}.res-tag{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--saffron)}.res-body h3{font-size:28px;margin-top:7px}.res-body p{color:var(--muted);font-size:13px;margin-top:10px}.res-body a{display:inline-block;color:var(--ganga);font-size:10px;text-transform:uppercase;letter-spacing:.12em;text-decoration:none;border-bottom:1px solid var(--ganga);margin-top:18px}
+
+.ritual-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}.ritual-media{height:570px}.ritual-list{border-top:1px solid var(--line);margin-top:28px}.ritual{display:grid;grid-template-columns:48px 1fr;gap:15px;padding:21px 0;border-bottom:1px solid var(--line)}.ritual b{font-family:"Cormorant Garamond",serif;color:var(--saffron);font-size:23px}.ritual h4{font-size:24px}.ritual p{color:var(--muted);font-size:13px;margin-top:4px}
+
+.gallery-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-template-rows:250px 250px;gap:12px;margin-top:45px}.gallery-item:first-child{grid-row:span 2}.gallery-item{overflow:hidden}.gallery-item img{transition:.5s}.gallery-item:hover img{transform:scale(1.03)}
+
+.faq{max-width:900px}.faq-list{margin-top:40px;border-top:1px solid var(--line)}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;display:flex;justify-content:space-between;text-align:left;gap:15px;padding:21px 0;border:0;background:none;color:var(--ink);font-family:"Cormorant Garamond",serif;font-size:25px;cursor:pointer}.faq-plus{font-family:"DM Sans";color:var(--saffron)}.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}.faq-a p{color:var(--muted);font-size:14px;padding:0 35px 22px 0}
+
+.enquiry-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:start}.enquiry-copy>p{color:rgba(255,255,255,.72);max-width:54ch;margin-top:17px}.process{display:grid;gap:12px;margin-top:28px}.process-row{display:flex;gap:13px;color:rgba(255,255,255,.75);font-size:13px}.process-row b{font-family:"Cormorant Garamond";font-size:21px;color:var(--gold2)}.form-shell{background:var(--ivory);color:var(--ink);padding:32px}.progress{display:flex;gap:6px;margin-bottom:25px}.progress span{height:3px;background:#d8d1c4;flex:1}.progress span.active{background:var(--saffron)}.step{display:none}.step.active{display:block}.step h3{font-size:31px}.step>p{font-size:13px;color:var(--muted);margin:7px 0 21px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field.full{grid-column:1/-1}.field label{display:block;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:#657174;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #d7d0c3;background:#fff;padding:13px 12px;outline:0;color:var(--ink);border-radius:0}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ganga);box-shadow:0 0 0 2px rgba(11,86,97,.08)}.field textarea{min-height:110px;resize:vertical}.form-actions{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:22px}.form-actions .right{display:flex;gap:9px}.error{display:none;color:var(--saffron2);font-size:12px;margin-top:9px}.success{display:none;text-align:center;padding:35px 5px}.success.show{display:block}.success h3{font-size:34px}.success p{color:var(--muted);font-size:14px;max-width:45ch;margin:10px auto 20px}
+
+footer{background:#041E23;color:rgba(255,255,255,.6);padding:65px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:45px}.footer-grid h4{color:#fff;font-size:21px;margin-bottom:10px}.footer-grid p,.footer-grid li{font-size:13px}.footer-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:7px}.footer-grid a{text-decoration:none}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:42px;padding-top:17px;font-size:10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.mobile-cta{display:none}
+
+@media(max-width:980px){.nav-links{display:none}.menu{display:block}.split,.ritual-grid,.enquiry-grid{grid-template-columns:1fr;gap:45px}.cards3{grid-template-columns:1fr 1fr}.res-grid{grid-template-columns:1fr}.res-card{grid-template-columns:1fr}.res-card .res-img{height:320px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:250px 250px 250px}.gallery-item:first-child{grid-column:span 2;grid-row:auto}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.container{width:calc(100% - 32px)}.site-header{height:70px}.brand-name{font-size:19px}.hero{padding-top:70px}.hero-inner{min-height:calc(100svh - 70px);padding-bottom:250px}.hero h1{font-size:3.25rem}.hero-copy>p{font-size:15px}.quickbar{width:calc(100% - 20px);grid-template-columns:1fr 1fr}.quick{padding:13px 14px}.quick strong{font-size:18px}.quick-cta{grid-column:1/-1;border-top:1px solid var(--line);justify-content:flex-end}.section{padding:78px 0}.facts{grid-template-columns:1fr 1fr}.fact{border-bottom:1px solid var(--line)}.cards3{grid-template-columns:1fr}.image-card{height:390px}.res-card .res-img{height:260px}.media,.ritual-media{height:440px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:210px 150px 150px}.gallery-item:first-child{grid-column:span 2}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.form-shell{padding:22px}.form-actions{align-items:stretch;flex-direction:column}.form-actions .right{width:100%}.form-actions .right .btn{flex:1}.footer-grid{grid-template-columns:1fr}.mobile-cta{display:flex;position:fixed;z-index:80;left:9px;right:9px;bottom:9px;background:rgba(255,253,248,.97);padding:8px;gap:8px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.mobile-cta .btn{flex:1}}
+</style>
+<title>Haridwar Travel Guide | Ganga, Har Ki Pauri & Kumbh</title><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="theme-color" content="#062F36"><meta name="description" content="A practical destination guide to Haridwar's Ganga ghats, Har Ki Pauri, Mansa Devi, Chandi Devi and the pilgrimage landscape around the Kumbh."><link rel="canonical" href="https://www.kumbhroyalheritage.com/haridwar.html">
+<meta property="og:title" content="Haridwar Travel Guide | Ganga, Har Ki Pauri & Kumbh"><meta property="og:description" content="A practical destination guide to Haridwar's Ganga ghats, Har Ki Pauri, Mansa Devi, Chandi Devi and the pilgrimage landscape around the Kumbh."><meta property="og:type" content="website"><meta property="og:url" content="https://www.kumbhroyalheritage.com/haridwar.html">
+<style>.mobile-nav{display:none}.mobile-nav a{color:#fff;text-decoration:none;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.1);font-size:11px;text-transform:uppercase;letter-spacing:.1em}.mobile-nav a:last-child{color:var(--gold2)}body.menu-open .mobile-nav{display:grid;position:fixed;top:70px;left:0;right:0;background:rgba(6,47,54,.98);padding:8px 16px 14px;box-shadow:0 15px 30px rgba(0,0,0,.2)}@media(min-width:641px){.mobile-nav{display:none!important}}</style><style id="offline image fallback">img{background:linear-gradient(135deg,#0B5661 0%,#083F48 55%,#C85A20 100%)}img.img-failed{visibility:hidden}</style><style>body{font-weight:450}p,.copy p,.section-intro p,.res-head p,.image-card p,.res-body p,.ritual p,.enquiry-copy>p{font-weight:450;line-height:1.72}h1,h2,h3,h4{font-weight:600}.hero h1{letter-spacing:-.018em}.section-intro p{font-size:17px}.copy p{font-size:16px}.image-card h3,.res-body h3,.ritual h4{font-weight:600}.nav-links a{font-weight:600}.brand-name{font-weight:600}.contact-dock{position:fixed;z-index:120;right:22px;bottom:22px;display:flex;gap:8px;background:rgba(4,30,35,.96);padding:7px;border:1px solid rgba(255,255,255,.12);box-shadow:0 12px 35px rgba(0,0,0,.24);backdrop-filter:blur(12px)}.contact-dock a{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 15px;text-decoration:none;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}.contact-call{background:#fff;color:var(--deep)}.contact-wa{background:#1f9d62;color:#fff}.contact-dock svg{width:16px;height:16px;fill:currentColor}@media(max-width:640px){.contact-dock{left:9px;right:9px;bottom:9px;justify-content:stretch}.contact-dock a{flex:1;justify-content:center}.mobile-cta{bottom:67px}}</style><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Kumbh Royal Heritage", "url": "https://www.kumbhroyalheritage.com/"}, {"@type": "Organization", "name": "Kumbh Royal Heritage", "url": "https://www.kumbhroyalheritage.com/"}, {"@type": "WebPage", "name": "Haridwar Travel Guide | Ganga, Har Ki Pauri & Kumbh", "description": "A practical destination guide to Haridwar's Ganga ghats, Har Ki Pauri, Mansa Devi, Chandi Devi and the pilgrimage landscape around the Kumbh.", "url": "https://www.kumbhroyalheritage.com/haridwar.html", "isPartOf": {"@type": "WebSite", "name": "Kumbh Royal Heritage", "url": "https://www.kumbhroyalheritage.com/"}}]}</script><style id="seo-aeo-typography">
+body{font-size:16px}
+h1,h2,h3,h4{font-weight:600}
+.hero h1{font-weight:600}
+.hero-copy>p,.section-intro p,.copy p,.enquiry-copy>p{font-size:17px;line-height:1.78}
+.section-intro{max-width:780px}
+.section-intro p{max-width:72ch}
+.copy p{max-width:68ch}
+.faq-a p{font-size:15px;line-height:1.75}
+.aeo-answer{margin-top:32px;padding:24px 26px;background:rgba(11,86,97,.07);border-left:3px solid var(--saffron)}
+.aeo-answer strong{display:block;font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:600;margin-bottom:6px}
+.aeo-answer p{margin:0;color:var(--ink);font-size:15px;line-height:1.75}
+.dark .aeo-answer{background:rgba(255,255,255,.08);border-left-color:var(--gold2)}
+.dark .aeo-answer p{color:rgba(255,255,255,.82)}
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:48px}
+.content-block{padding:28px;background:#fff;border:1px solid var(--line)}
+.content-block h3{font-size:27px;margin-bottom:9px}
+.content-block p{color:var(--muted);font-size:15px;line-height:1.75;margin:0}
+.prose{max-width:850px}
+.prose h2{margin-top:50px}
+.prose p{font-size:16px;line-height:1.8;color:var(--muted);max-width:75ch}
+.breadcrumb{padding:16px 0 0;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.breadcrumb a{text-decoration:none}
+@media(max-width:640px){body{font-size:16px}.hero-copy>p,.section-intro p,.copy p,.enquiry-copy>p{font-size:16px}.content-grid{grid-template-columns:1fr}.aeo-answer{padding:20px}.aeo-answer strong{font-size:22px}}
+</style><style id="tent-package-system">
+.tent-packages{padding:96px 0;background:#fbf7ef;color:var(--ink)}
+.tent-packages.dark{background:#061f2b;color:#fff}
+.tent-packages-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:38px}
+.tent-packages-head h2{max-width:720px}
+.tent-packages-head p{max-width:560px;color:var(--muted);font-size:16px;line-height:1.75;margin:12px 0 0}
+.dark .tent-packages-head p{color:rgba(255,255,255,.72)}
+.tent-package-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tent-package{background:#fff;border:1px solid #e8dfd2;box-shadow:0 10px 30px rgba(23,38,43,.06);display:flex;flex-direction:column;overflow:hidden}
+.dark .tent-package{background:#0b303b;border-color:rgba(255,255,255,.12);color:#fff}
+.tent-package-image{height:220px;position:relative;overflow:hidden}
+.tent-package-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tent-package:hover .tent-package-image img{transform:scale(1.04)}
+.tent-package-badge{position:absolute;top:12px;left:12px;background:#061f2b;color:#fff;padding:7px 10px;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.tent-package-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.tent-package h3{font-size:29px;margin-bottom:7px}
+.tent-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:#6c7676;margin-bottom:14px}
+.dark .tent-meta{color:rgba(255,255,255,.65)}
+.tent-package-body p{font-size:14px;line-height:1.7;color:#596566;margin:0 0 16px}
+.dark .tent-package-body p{color:rgba(255,255,255,.72)}
+.tent-includes{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:7px;font-size:12px;color:#344244}
+.dark .tent-includes{color:rgba(255,255,255,.8)}
+.tent-includes li:before{content:'✓';color:#c76b20;font-weight:700;margin-right:8px}
+.tent-price{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:600;margin-top:auto;padding-top:8px}
+.tent-price small{font-family:"DM Sans",sans-serif;font-size:10px;color:#7c8584;font-weight:500}
+.tent-package .btn{margin-top:16px;width:100%}
+.tent-note{margin-top:20px;font-size:12px;color:#727d7c;line-height:1.7}
+.dark .tent-note{color:rgba(255,255,255,.6)}
+@media(max-width:1000px){.tent-package-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.tent-packages{padding:70px 0}.tent-packages-head{display:block}.tent-package-grid{grid-template-columns:1fr}.tent-package-image{height:235px}.tent-packages-head h2{font-size:42px}}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Kumbh Royal Heritage Kumbh 2027 Tent Packages","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Deluxe Tent","description":"Private luxury tent for couples and smaller groups during Haridwar Ardh Kumbh 2027."}},{"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Premium Tent","description":"Larger premium tent with upgraded furnishings for a more comfortable Kumbh stay."}},{"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Family Tent","description":"Family-focused luxury tent with additional sleeping and living space."}},{"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Heritage Suite Tent","description":"Signature luxury suite tent with premium furnishings and personalised assistance."}}]}</script><link rel="preload" as="image" href="https://images.unsplash.com/photo-1653392083932-d5e9e7d2ccd1?auto=format&fit=crop&fm=jpg&q=88&w=2400">
+
+<style id="conversion-cta-styles">
+/* === Conversion layer: sticky contact + quick enquiry === */
+body{padding-bottom:82px}
+.sticky-contact-bar{position:fixed;z-index:140;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:7px;background:rgba(4,30,35,.97);border:1px solid rgba(255,255,255,.13);box-shadow:0 16px 44px rgba(0,0,0,.28);backdrop-filter:blur(14px);border-radius:2px}
+.sticky-contact-bar a,.sticky-contact-bar button{appearance:none;border:0;font:inherit;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;text-decoration:none;cursor:pointer;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.sticky-contact-bar svg{width:17px;height:17px;flex:none}
+.sticky-contact-call{background:#fff;color:var(--deep)}
+.sticky-contact-wa{background:#218b5a;color:#fff}
+.sticky-contact-enquire{background:var(--gold2);color:var(--deep)}
+.quick-enquiry-trigger{position:fixed;z-index:139;right:22px;bottom:87px;border:1px solid rgba(212,164,65,.42);background:rgba(6,47,54,.96);color:#fff;padding:12px 16px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 35px rgba(0,0,0,.2)}
+.quick-enquiry-trigger span{opacity:.65;margin-right:5px}
+.enquiry-modal{position:fixed;inset:0;z-index:220;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,21,24,.72);backdrop-filter:blur(8px)}
+.enquiry-modal.open{display:flex}
+.enquiry-modal-card{position:relative;width:min(620px,100%);background:var(--ivory);color:var(--ink);padding:34px;box-shadow:0 24px 70px rgba(0,0,0,.34);max-height:min(88vh,760px);overflow:auto}
+.enquiry-modal-close{position:absolute;top:12px;right:12px;border:0;background:transparent;color:var(--muted);font-size:26px;line-height:1;cursor:pointer;padding:7px}
+.enquiry-modal-card h2{font-size:34px;margin:4px 0 8px}.enquiry-modal-card>p{font-size:14px;color:var(--muted);line-height:1.65;margin:0 0 22px;max-width:48ch}
+.quick-enquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.quick-enquiry-grid .full{grid-column:1/-1}
+.quick-enquiry-field label{display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:#657174;margin-bottom:6px}.quick-enquiry-field input,.quick-enquiry-field select,.quick-enquiry-field textarea{width:100%;border:1px solid #d7d0c3;background:#fff;padding:13px 12px;outline:0;color:var(--ink);border-radius:0}.quick-enquiry-field textarea{min-height:92px;resize:vertical}
+.quick-enquiry-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px}.quick-enquiry-note{font-size:11px;color:var(--muted);line-height:1.5}.quick-enquiry-actions .btn{white-space:nowrap}
+.quick-enquiry-success{display:none;padding:12px 0 2px}.quick-enquiry-success.show{display:block}.quick-enquiry-success h3{font-size:29px;margin-bottom:8px}.quick-enquiry-success p{font-size:13px;color:var(--muted);line-height:1.65}
+body.enquiry-open{overflow:hidden}
+@media(max-width:640px){
+ .sticky-contact-bar{left:10px;right:10px;bottom:10px;transform:none;padding:7px;gap:6px;border-radius:2px}
+ .sticky-contact-bar a,.sticky-contact-bar button{flex:1;min-height:46px;padding:0 8px;font-size:9px;letter-spacing:.08em}
+ .sticky-contact-bar svg{width:16px;height:16px}
+ .quick-enquiry-trigger{right:10px;bottom:72px;padding:10px 13px;font-size:9px}
+ .enquiry-modal{padding:10px}.enquiry-modal-card{padding:25px 18px 20px;max-height:92vh}
+ .enquiry-modal-card h2{font-size:30px}.quick-enquiry-grid{grid-template-columns:1fr}.quick-enquiry-grid .full{grid-column:auto}.quick-enquiry-actions{flex-direction:column;align-items:stretch}.quick-enquiry-actions .btn{width:100%}
+}
+</style>
+</head><body><header class="site-header"><div class="container nav">
+<a class="brand" href="index.html"><span class="brand-mark">ॐ</span><span><span class="brand-name">Kumbh Royal Heritage</span><span class="brand-sub">Ardh Kumbh · Haridwar 2027</span></span></a>
+<nav class="nav-links"><a class="" href="experience.html">The Experience</a><a class="" href="tent-packages.html">Tent Packages</a><a class="" href="experiences.html">Experiences</a><a class="active" href="haridwar.html">Haridwar</a><a class="" href="kumbh-2027.html">Kumbh Guide</a><a class="btn btn-primary" href="plan-your-stay.html">Enquire</a></nav>
+<button class="menu" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button></div>
+<div class="mobile-nav"><a class="" href="experience.html">The Experience</a><a class="" href="tent-packages.html">Tent Packages</a><a class="" href="experiences.html">Experiences</a><a class="active" href="haridwar.html">Haridwar</a><a class="" href="kumbh-2027.html">Kumbh Guide</a><a href="plan-your-stay.html">Plan your stay →</a></div></header><div class="container breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Haridwar</div><section class="hero" style="min-height:78vh"><div class="hero-media"><img src="https://images.unsplash.com/photo-1653392083932-d5e9e7d2ccd1?auto=format&fit=crop&fm=jpg&q=88&w=2400" alt="Haridwar and Maa Ganga"></div><div class="hero-overlay"></div><div class="container hero-inner" style="min-height:calc(78vh - 82px);padding-bottom:90px"><div class="hero-copy"><div class="eyebrow">Destination guide</div><h1>Haridwar, the gateway to the <em>Ganga.</em></h1><p>An ancient pilgrimage city beside the sacred Ganga, and one of the four cities that host Kumbh gatherings.</p></div></div></section><section class="tent-packages" id="tent-packages">
+  <div class="container">
+    <div class="tent-packages-head">
+      <div>
+        <div class="eyebrow">Stay with us · Haridwar Kumbh 2027</div>
+        <h2>Choose Your Tent Package</h2>
+        <p>Four thoughtfully designed tent categories for couples, families and guests who want a more comfortable way to experience Ardh Kumbh Mela in Haridwar.</p>
+      </div>
+      <a class="btn btn-primary" href="plan-your-stay.html">Check availability →</a>
+    </div>
+    <div class="tent-package-grid">
+      <article class="tent-package">
+        <div class="tent-package-image"><img src="https://images.unsplash.com/photo-1653392091141-2009299aab35?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Pilgrims by Maa Ganga in Haridwar" loading="lazy" width="460" height="250"><span class="tent-package-badge">Essential comfort</span></div>
+        <div class="tent-package-body"><h3>Deluxe Tent</h3><div class="tent-meta"><span>2 guests</span><span>Double / twin</span></div><p>An elegant private tent for couples and smaller groups who want comfort, privacy and a well-kept base during the Kumbh.</p><ul class="tent-includes"><li>Private attached washroom</li><li>Comfortable bed & seating</li><li>Housekeeping & security</li></ul><div class="tent-price">Price on request <small>/ night</small></div><a class="btn btn-primary" href="plan-your-stay.html?package=deluxe">Enquire for Deluxe</a></div>
+      </article>
+      <article class="tent-package">
+        <div class="tent-package-image"><img src="https://images.unsplash.com/photo-1774290945910-d728337350fa?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Ganga Aarti — worship of Maa Ganga at Har Ki Pauri" loading="lazy" width="460" height="250"><span class="tent-package-badge">Most chosen</span></div>
+        <div class="tent-package-body"><h3>Premium Tent</h3><div class="tent-meta"><span>2–3 guests</span><span>King bed</span></div><p>More space and a richer interior for guests who want a little more room to slow down between temple visits and Kumbh experiences.</p><ul class="tent-includes"><li>Premium attached washroom</li><li>Sitting area & upgraded furnishings</li><li>Daily housekeeping & support</li></ul><div class="tent-price">Price on request <small>/ night</small></div><a class="btn btn-primary" href="plan-your-stay.html?package=premium">Enquire for Premium</a></div>
+      </article>
+      <article class="tent-package">
+        <div class="tent-package-image"><img src="https://images.unsplash.com/photo-1653392171376-63cb323fb31e?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Haridwar pilgrimage landscape beside Maa Ganga" loading="lazy" width="460" height="250"><span class="tent-package-badge">Family choice</span></div>
+        <div class="tent-package-body"><h3>Family Tent</h3><div class="tent-meta"><span>4–5 guests</span><span>Multiple beds</span></div><p>Designed around families travelling together, with extra room for luggage, children and unhurried time inside the tent.</p><ul class="tent-includes"><li>Private attached washroom</li><li>Extra sleeping & living space</li><li>Family-focused hosting support</li></ul><div class="tent-price">Price on request <small>/ night</small></div><a class="btn btn-primary" href="plan-your-stay.html?package=family">Enquire for Family</a></div>
+      </article>
+      <article class="tent-package">
+        <div class="tent-package-image"><img src="https://images.unsplash.com/photo-1576516816755-705b4b24df2d?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Haridwar riverfront and sacred ghats of Maa Ganga" loading="lazy" width="460" height="250"><span class="tent-package-badge">Signature</span></div>
+        <div class="tent-package-body"><h3>Heritage Suite Tent</h3><div class="tent-meta"><span>2 guests</span><span>King bed</span></div><p>Our most elevated tent category for guests who want generous space, refined interiors and a more private, premium stay.</p><ul class="tent-includes"><li>Premium private washroom</li><li>Separate sitting / lounge area</li><li>Personalised guest assistance</li></ul><div class="tent-price">Price on request <small>/ night</small></div><a class="btn btn-primary" href="plan-your-stay.html?package=heritage-suite">Enquire for Suite</a></div>
+      </article>
+    </div>
+    <p class="tent-note">Rates can vary by travel dates, length of stay and major bathing days. Final inclusions and availability are confirmed at enquiry rather than assumed from a generic tariff.</p>
+  </div>
+</section>
+<section class="section">
+<div class="container prose">
+<div class="eyebrow">Haridwar travel guide</div>
+<h2>What is Haridwar known for?</h2>
+<div class="aeo-answer"><strong>Haridwar is a major Hindu pilgrimage city on the Ganga, known for its ghats, Ganga Aarti, temples and its association with the Kumbh tradition.</strong><p>The city is also a gateway to the wider Garhwal region and a place where pilgrimage, daily life and Maa Ganga are closely intertwined.</p></div>
+<h2>How many days do you need in Haridwar?</h2>
+<p>There is no single right answer. A short visit can cover the major ghats and an evening Aarti, while a longer stay allows time for temples, moments beside Maa Ganga and nearby pilgrimage sites. During Kumbh, adding buffer time is sensible because ordinary travel assumptions may not apply.</p>
+<h2>What should first-time visitors know?</h2>
+<p>Haridwar can feel very different at different times of day. Early mornings can be peaceful, while popular ghats and markets become much busier around major rituals. Comfortable footwear, realistic transfer times and a flexible itinerary are more useful than trying to fit every attraction into a rigid schedule.</p>
+</div></section>
+
+<section class="section intro"><div class="container"><div class="section-intro"><div class="eyebrow">Know the city</div><h2>Maa Ganga is the starting point.</h2><p>Haridwar's sacred geography extends beyond a single ghat. Har Ki Pauri, Mansa Devi, Chandi Devi and Kankhal form part of the city's pilgrimage landscape.</p></div></div></section>
+<section class="section paper"><div class="container cards3">
+<article class="image-card"><img src="https://images.unsplash.com/photo-1653392091141-2009299aab35?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Har Ki Pauri and pilgrims"><div class="image-card-content"><h3>Har Ki Pauri</h3><p>The famous ghat where the evening Ganga Aarti draws pilgrims and visitors every day.</p></div></article>
+<article class="image-card"><img src="https://images.unsplash.com/photo-1676744846995-16b700a00d57?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Mansa Devi area in Haridwar"><div class="image-card-content"><h3>Mansa Devi</h3><p>A revered shrine on Bilwa Parvat, accessible by trek or ropeway.</p></div></article>
+<article class="image-card"><img src="https://images.unsplash.com/photo-1774290945910-d728337350fa?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Chandi Devi and pilgrimage"><div class="image-card-content"><h3>Chandi Devi</h3><p>A major shrine on Neel Parvat and one part of Haridwar's Siddhapeeth tradition.</p></div></article>
+</div></section>
+<section class="section sand"><div class="container split"><div class="copy"><div class="eyebrow">Plan with perspective</div><h2>Come with a plan. Leave room for the unexpected.</h2><p>Traffic, crowds and ritual timings can change the shape of a day in Haridwar. A private host can help you keep the important moments while staying flexible.</p><a class="btn btn-primary" href="plan-your-stay.html">Talk to our host</a></div><div class="media"><img src="https://images.unsplash.com/photo-1576516816755-705b4b24df2d?auto=format&fit=crop&fm=jpg&q=88&w=1800" alt="Maa Ganga at Haridwar"></div></div></section>
+<footer><div class="container footer-grid">
+<div><h4>Kumbh Royal Heritage</h4><p>A private hospitality experience for discerning guests visiting Haridwar during the 2027 Ardh Kumbh.</p></div>
+<div><h4>Explore</h4><ul><li><a href="experience.html">The Experience</a></li><li><a href="tent-packages.html">Tent Packages</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="haridwar.html">Haridwar Guide</a></li><li><a href="kumbh-2027.html">Kumbh 2027 Guide</a></li></ul></div>
+<div><h4>Private enquiries</h4><ul><li>+91 98XXX XXXXX</li><li>stay@kumbhroyalheritage.com</li><li>Near Har Ki Pauri, Haridwar</li></ul></div>
+</div><div class="container footer-bottom"><span>© 2026 Kumbh Royal Heritage</span><span>Independent private hospitality · Information should be verified before travel.</span></div></footer><script>
+document.querySelectorAll(".faq-q").forEach(q=>q.addEventListener("click",()=>{const item=q.parentElement,a=item.querySelector(".faq-a"),open=item.classList.contains("open");document.querySelectorAll(".faq-item.open").forEach(x=>{x.classList.remove("open");x.querySelector(".faq-a").style.maxHeight=null});if(!open){item.classList.add("open");a.style.maxHeight=a.scrollHeight+"px"}}));
+document.querySelectorAll("img").forEach(img=>img.addEventListener("error",()=>{img.classList.add("img-failed");img.style.opacity=0;img.parentElement.style.background="linear-gradient(135deg,#0B5661,#C85A20,#D79A2B)"}));
+</script>
+<div class="quick-enquiry-trigger" data-open-enquiry><span>Need help?</span> Enquire now</div>
+<div class="sticky-contact-bar" aria-label="Contact Kumbh Royal Heritage">
+  <a class="sticky-contact-call" href="tel:+9198XXXXXXXX" aria-label="Call Kumbh Royal Heritage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.6 3.1 3.5 4.9 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.5 2.5.8 3.7.9.5 0 .8.4.8.9v3.5c0 .5-.4.9-.9.9C11.8 20.9 3.1 12.2 3.1 1.9c0-.5.4-.9.9-.9h3.5c.5 0 .9.3.9.8.1 1.3.4 2.5.9 3.7.1.4.1.8-.2 1.1l-2.5 2.2Z" fill="currentColor"/></svg><span>Call</span></a>
+  <a class="sticky-contact-wa" href="https://wa.me/9198XXXXXXXX?text=Namaste%20Kumbh%20Royal%20Heritage%2C%20I%27d%20like%20to%20enquire%20about%20a%20Haridwar%20Kumbh%20stay." target="_blank" rel="noopener" aria-label="WhatsApp Kumbh Royal Heritage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.8L.2 24l6.6-1.7a11.9 11.9 0 0 0 5.3 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.3-6.1-3.5-8.3ZM12.2 21.5h-.1c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.9 1 1-3.8-.2-.3a9.7 9.7 0 0 1-1.5-5.2C2.4 6.3 6.8 2 12.1 2c2.6 0 5 1 6.8 2.8a9.6 9.6 0 0 1 2.8 6.9c0 5.3-4.3 9.8-9.5 9.8Zm5.3-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7-.1-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3.1 1.2 3.3c.2.2 2.1 3.2 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.3.3-.6.3-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z" fill="currentColor"/></svg><span>WhatsApp</span></a>
+  <button class="sticky-contact-enquire" type="button" data-open-enquiry aria-label="Open enquiry form"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21.7 2.3-19 7.4c-.9.3-.9 1.6 0 1.9l7.5 2.8 2.8 7.5c.3.9 1.6.9 1.9 0l7.4-19c.3-.8-.5-1.4-1.3-1.1ZM10.7 13.3l-6.1-2.2 14.7-5.7-8.6 8.6Zm1.1 1.1 8.6-8.6-5.7 14.7-2.2-6.1-.7-.7Z" fill="currentColor"/></svg><span>Enquire</span></button>
+</div>
+<div class="enquiry-modal" id="quickEnquiryModal" role="dialog" aria-modal="true" aria-labelledby="quickEnquiryTitle">
+  <div class="enquiry-modal-card">
+    <button class="enquiry-modal-close" type="button" data-close-enquiry aria-label="Close enquiry">×</button>
+    <div class="eyebrow">Private enquiry · Kumbh Royal Heritage</div>
+    <h2 id="quickEnquiryTitle">Tell us what you're planning.</h2>
+    <p>Start with the essentials. Share your dates, group and contact details, and the Kumbh Royal Heritage team can guide you toward the right stay.</p>
+    <form id="quickEnquiryForm">
+      <div class="quick-enquiry-grid">
+        <div class="quick-enquiry-field"><label for="qe-name">Full name</label><input id="qe-name" name="name" required autocomplete="name" placeholder="Your name"></div>
+        <div class="quick-enquiry-field"><label for="qe-phone">WhatsApp / phone</label><input id="qe-phone" name="phone" required autocomplete="tel" placeholder="+91 98XXX XXXXX"></div>
+        <div class="quick-enquiry-field"><label for="qe-email">Email</label><input id="qe-email" name="email" required type="email" autocomplete="email" placeholder="you@example.com"></div>
+        <div class="quick-enquiry-field"><label for="qe-arrival">Approx. arrival</label><input id="qe-arrival" name="arrival" type="date" min="2027-01-01"></div>
+        <div class="quick-enquiry-field"><label for="qe-guests">Guests</label><input id="qe-guests" name="guests" type="number" min="1" max="50" placeholder="e.g. 4"></div>
+        <div class="quick-enquiry-field"><label for="qe-package">Tent package</label><select id="qe-package" name="package"><option>Not sure yet</option><option>Deluxe Tent</option><option>Premium Tent</option><option>Family Tent</option><option>Heritage Suite Tent</option></select></div>
+        <div class="quick-enquiry-field full"><label for="qe-message">Anything we should know?</label><textarea id="qe-message" name="message" placeholder="Elders, children, important bathing dates, preferences, or anything else..."></textarea></div>
+      </div>
+      <div class="quick-enquiry-actions"><div class="quick-enquiry-note">No payment is taken here. This simply starts the conversation.</div><button class="btn btn-primary" type="submit">Send enquiry <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21.7 2.3-19 7.4c-.9.3-.9 1.6 0 1.9l7.5 2.8 2.8 7.5c.3.9 1.6.9 1.9 0l7.4-19c.3-.8-.5-1.4-1.3-1.1ZM10.7 13.3l-6.1-2.2 14.7-5.7-8.6 8.6Zm1.1 1.1 8.6-8.6-5.7 14.7-2.2-6.1-.7-.7Z" fill="currentColor"/></svg></button></div>
+    </form>
+    <div class="quick-enquiry-success" id="quickEnquirySuccess"><h3>Thank you.</h3><p>Your email client will open with the enquiry ready to send to Kumbh Royal Heritage.</p><button class="btn btn-teal" type="button" data-close-enquiry>Close</button></div>
+  </div>
+</div>
+
+<script id="conversion-cta-script">
+(function(){
+  const modal=document.getElementById('quickEnquiryModal');
+  const trigger=document.querySelectorAll('[data-open-enquiry]');
+  const close=document.querySelectorAll('[data-close-enquiry]');
+  const form=document.getElementById('quickEnquiryForm');
+  const success=document.getElementById('quickEnquirySuccess');
+  function openModal(){if(!modal)return; modal.classList.add('open'); document.body.classList.add('enquiry-open'); const first=modal.querySelector('input'); if(first)setTimeout(()=>first.focus(),60)}
+  function closeModal(){if(!modal)return; modal.classList.remove('open'); document.body.classList.remove('enquiry-open')}
+  trigger.forEach(el=>el.addEventListener('click',openModal));
+  close.forEach(el=>el.addEventListener('click',closeModal));
+  if(modal) modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      const data=new FormData(form);
+      const name=(data.get('name')||'').trim();
+      const phone=(data.get('phone')||'').trim();
+      const email=(data.get('email')||'').trim();
+      if(!name||!phone||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+      const params=new URLSearchParams(window.location.search);
+      const pkg=params.get('package')||data.get('package')||'Not sure yet';
+      const body=[
+        'Name: '+name,
+        'WhatsApp / Phone: '+phone,
+        'Email: '+email,
+        'Arrival: '+(data.get('arrival')||'Not specified'),
+        'Guests: '+(data.get('guests')||'Not specified'),
+        'Tent package: '+pkg,
+        'Message: '+(data.get('message')||'')
+      ].join('\n');
+      window.location.href='mailto:stay@kumbhroyalheritage.com?subject='+encodeURIComponent('Kumbh Royal Heritage enquiry from '+name)+'&body='+encodeURIComponent(body);
+      form.style.display='none'; if(success)success.classList.add('show');
+    });
+  }
+})();
+</script>
+</body></html>
